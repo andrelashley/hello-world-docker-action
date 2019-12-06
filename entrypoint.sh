@@ -10,5 +10,5 @@ echo "${OUTPUT}"
 OUTPUT="$(oc project ntu9uh-tools)"
 echo "${OUTPUT}"
 
-OUTPUT="$(oc start build hub-api-develop)"
+OUTPUT="$(oc start-build hub-api-develop)"
 echo "${OUTPUT}"
