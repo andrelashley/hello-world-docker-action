@@ -27,7 +27,7 @@ jobs:
     - uses: ./ # Uses an action in the root directory
     - name: My build action step
       id: mba
-      uses: ../.github/actions/my-build-action@v1
+      uses: /actions/my-build-action@v1
       with:
         who-to-greet: 'Mona the Octocat'
     # Use the output from the `hello` step
