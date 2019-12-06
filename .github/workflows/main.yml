@@ -24,7 +24,7 @@ jobs:
     # To use this repository's private action, you must check out the repository
     - name: Checkout
       uses: actions/checkout@v1
-    - uses: ./ # Uses an action in the root directory
+    - uses: ./.github/actions/my-build-action # Uses an action in the root directory
     - name: OC cli step
       id: oc
       uses: actions/my-build-action@v1
