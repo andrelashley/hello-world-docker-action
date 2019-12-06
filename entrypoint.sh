@@ -5,4 +5,4 @@ time=$(date)
 echo ::set-output name=time::$time
 
 OUTPUT="$(oc version)"
-echo "${OUTPUT}"
+echo "oc version"
