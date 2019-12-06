@@ -1,5 +1,5 @@
 # Container image that runs your code
-FROM rgroult2/openshift-oc-docker:latest
+FROM openshift-oc-docker:latest
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
