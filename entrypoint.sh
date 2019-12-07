@@ -15,3 +15,9 @@ echo "${OUTPUT}"
 
 OUTPUT="$(oc tag hub-api:latest hub-api:DEVELOP-$BUILD_ID)"
 echo "${OUTPUT}"
+
+OUTPUT="$(oc tag hub-api:DEVELOP-$BUILD_ID hub-api:dev)"
+echo "${OUTPUT}"
+
+OUTPUT="$(oc tag hub-api:dev hub-api:test)"
+echo "${OUTPUT}"
