@@ -10,5 +10,8 @@ echo "${OUTPUT}"
 OUTPUT="$(oc project ntu9uh-tools)"
 echo "${OUTPUT}"
 
-OUTPUT="$(oc start-build hub-api-develop)"
+OUTPUT="$(oc start-build hub-api-develop --wait)"
+echo "${OUTPUT}"
+
+OUTPUT="$(oc tag hub-api:latest hub-api:DEVELOP-$BUILD_ID)"
 echo "${OUTPUT}"
