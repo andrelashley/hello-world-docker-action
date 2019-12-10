@@ -22,6 +22,12 @@ echo "${OUTPUT}"
 OUTPUT="$(oc tag hub-api:dev hub-api:test)"
 echo "${OUTPUT}"
 
+OUTPUT="$(oc start-build frontend-sonar --wait)"
+echo "${OUTPUT}"
+
+OUTPUT="$(oc start-build frontend-snyk --wait)"
+echo "${OUTPUT}"
+
 OUTPUT="$(oc start-build frontend-yarn-builder --wait)"
 echo "${OUTPUT}"
 
