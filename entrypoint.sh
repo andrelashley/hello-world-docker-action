@@ -21,3 +21,6 @@ echo "${OUTPUT}"
 
 OUTPUT="$(oc tag hub-api:dev hub-api:test)"
 echo "${OUTPUT}"
+
+OUTPUT="$(oc start-build frontend-yarn-builder --wait)"
+echo "${OUTPUT}"
