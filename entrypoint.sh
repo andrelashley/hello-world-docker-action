@@ -24,3 +24,22 @@ echo "${OUTPUT}"
 
 OUTPUT="$(oc start-build frontend-yarn-builder --wait)"
 echo "${OUTPUT}"
+
+OUTPUT="$(oc start-build frontend-nginx-runtime --wait)"
+echo "${OUTPUT}"
+
+OUTPUT="$(oc start-build news-dashboard --wait)"
+echo "${OUTPUT}"
+
+OUTPUT="$(oc start-build news-dashboard-static --wait)"
+echo "${OUTPUT}"
+
+OUTPUT="$(oc tag news-dashboard-static:latest news-dashboard-static:DEVELOP-$BUILD_ID)"
+echo "${OUTPUT}"
+
+OUTPUT="$(oc tag news-dashboard-static:DEVELOP-$BUILD_ID news-dashboard-static:dev)"
+echo "${OUTPUT}"
+
+OUTPUT="$(oc tag news-dashboard-static:dev news-dashboard-static:test)"
+echo "${OUTPUT}"
+
